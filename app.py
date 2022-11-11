@@ -3,9 +3,12 @@ import pandas as pd
 from dash import Dash, html, dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
-from charts import create_table, set_layout
+from charts import create_sankey
 import plotly.graph_objects as go
 import dash_trich_components as dtc
+from prep import prepare_sahkey_data
+
+all_numerics, names, count_dict, source_list, target_list = prepare_sahkey_data('data/Simulated_Customer_Data_Sankey.csv')
 
 
 app = Dash(
@@ -37,11 +40,9 @@ app.layout = html.Div([
                     header,
                     theme_switch,
                     html.Div([
-                        html.Div([
-
-
-                            ], className=""),
-
+                          html.P('Customer Segmentation', style={'font-size':'16px', 'font-weight':'600'}),
+                          html.P('Month on Month'),
+                          dcc.Graph(figure=create_sankey(all_numerics, names, count_dict, source_list, target_list), style={'width':'100%'})
                     ], className='dash__graph_block'),
                     footer
 
