@@ -196,12 +196,12 @@ tr:hover{
     background-color: transparent!Important;
 }
 
-.column-header-name{
+.column-header-name, {
     color: var(--textDefault);
 }
 
-.svg-inline--fa path{
-    fill: var(--textDefault);
+.svg-inline--fa path, .annotation-text{
+    fill: var(--textDefault)!Important;
 }
 
 .current-page-container input{
@@ -232,7 +232,7 @@ tr:hover{
 }
 .dash__link{
     font-size:14px;
-    color: #000;
+    color: #cfdad9;
     font-weight:600;
     text-decoration:none;
 }

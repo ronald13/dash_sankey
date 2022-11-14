@@ -17,7 +17,7 @@ theme_toggle = dtc.ThemeToggle(
         # icon_color_dark='#EDC575',
         # bg_color_light='#07484E',
         icon_color_light='#C8DBDC',
-        tooltip_text='Toggle light/dark theme'
+        tooltip_text='light/dark'
     )
 theme_switch = html.Div(theme_toggle, className='theme__switcher')
 header = html.Div([
@@ -26,7 +26,7 @@ header = html.Div([
 ], className='dash__header')
 
 footer = html.Div([
-    html.P('Source:  ', style={}),
+    html.P('Source:', style={'font-weight':'600'}),
     html.A('Arslan Shahid',href='https://python.plainenglish.io/sankeying-with-plotly-90500b87d8cf', className = "dash__link", style={'margin': '0 0 0 10px'})
 
 ], className='dash__footer')
