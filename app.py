@@ -22,11 +22,12 @@ theme_toggle = dtc.ThemeToggle(
 theme_switch = html.Div(theme_toggle, className='theme__switcher')
 header = html.Div([
         html.H1('Sankey Diagram'),
-        html.P('How to make Sankey diagrams in Plotly'),
+        html.P('Sankey diagrams are used to visualize flow or processes, as the above image shows how many transitions/flow between different customer segments.'),
 ], className='dash__header')
 
 footer = html.Div([
-    html.P('Source:', style={}),
+    html.P('Source:  ', style={}),
+    html.A('Arslan Shahid',href='https://python.plainenglish.io/sankeying-with-plotly-90500b87d8cf', className = "dash__link", style={'margin': '0 0 0 10px'})
 
 ], className='dash__footer')
 
@@ -37,7 +38,6 @@ app.layout = html.Div([
                     theme_switch,
                     html.Div([
                           html.P('Customer Segmentation', style={'font-size':'16px', 'font-weight':'600'}),
-                          html.P('Month on Month'),
                           dcc.Graph(figure=create_sankey(all_numerics, names, count_dict, source_list, target_list ), style={'width':'100%'})
                     ], className='dash__graph_block'),
                     footer

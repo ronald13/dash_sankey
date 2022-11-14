@@ -35,5 +35,6 @@ def create_sankey(all_numerics, names, count_dict, source_list, target_list ):
         )
 
     fig.update_layout(font_size=15, height=600, margin=dict(t=60,l=0,b=20,r=30, pad=20))
-
+    fig.update_xaxes(visible=False)
+    fig.update_yaxes(visible=False)
     return fig
