@@ -225,4 +225,14 @@ tr:hover{
     background:none!Important;
     border:2px solid #cfdad9;
 }
-
+.dash__footer{
+    display:flex;
+    align-items:flex-start;
+    margin:20px 0;
+}
+.dash__link{
+    font-size:14px;
+    color: #000;
+    font-weight:600;
+    text-decoration:none;
+}
